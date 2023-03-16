@@ -2,6 +2,7 @@
 import { reactive } from "vue";
 import BaseButton from "@/components/BaseButton.vue";
 import MyEmit from "@/components/MyEmit.vue";
+import { RouterView } from "vue-router";
 
 const state = reactive({
   name: "Musab",
@@ -30,10 +31,7 @@ const ClickMe = (id) => {
 </script>
 
 <template>
-  <!-- <div>{{ state.myArr[0]?.name }}</div> -->
-  <BaseButton title="Click ME" @click="ClickMe(1)" />
-  <MyEmit @onPress="(name) => callEmit(name)" />
-  <!-- is my branch upto date? -->
+  <RouterView />
 </template>
 
 <style scoped></style>
